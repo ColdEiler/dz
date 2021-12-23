@@ -7,6 +7,7 @@ using System.IO;
 
 namespace dz_5
 {
+    
     class Alph
     {
         public List<char> a = new List<char> { 'a', 'b', 'c', 'd', 'e', 'f' };
@@ -49,7 +50,7 @@ namespace dz_5
             }
         }
 
-        static bool hasnextCombobj(List<char> comb,char last)
+        static bool hasnextCombobj(List<char> comb, char last)
         {
             string l = null;
             for (int i = 0; i < comb.Count; i++)
@@ -66,7 +67,7 @@ namespace dz_5
                 s += a[i];
             return s;
         }
-        
+
         static bool ka(List<char> a)
         {
             int k = 0;
@@ -81,13 +82,13 @@ namespace dz_5
         static void Main(string[] args)
         {
 
-            List<char> comb = new List<char> { 'a', 'a', 'a', 'a'};
+            List<char> comb = new List<char> { 'a', 'a', 'a', 'a' };
             List<char> comb1 = new List<char> { 'a', 'a', 'a', 'a', 'a', 'a', 'a' };
             Alph a = new Alph();
 
             StreamWriter sw = new StreamWriter(@"C:\Users\Владислав\source\repos\dz\dz\dz_5\1.txt");
             StreamWriter rw = new StreamWriter(@"C:\Users\Владислав\source\repos\dz\dz\dz_5\2.txt");
-            while (hasnextCombobj(comb,a.last))
+            while (hasnextCombobj(comb, a.last))
             {
                 string s = null;
                 s = Vivod(comb, s);
@@ -96,7 +97,7 @@ namespace dz_5
                 nextCombobj(comb, a);
             }
             sw.Close();
-            while (hasnextCombobj(comb1,a.last))
+            while (hasnextCombobj(comb1, a.last))
             {
                 string s = null;
                 s = Vivod(comb1, s);
@@ -108,5 +109,6 @@ namespace dz_5
             Console.WriteLine("Процесс Завершился!!!");
             Console.ReadKey();
         }
-    }
+
+    } 
 }
