@@ -136,8 +136,8 @@ namespace dz_4
             List<char> comb1 = new List<char> { 'a', 'a', 'a', 'a', 'a', 'a', 'a','a','a'};
             Alph a = new Alph();
 
-            StreamWriter sw = new StreamWriter(@"C:\Users\Владислав\source\repos\dz\dz\dz_3\1.txt");
-            StreamWriter rw = new StreamWriter(@"C:\Users\Владислав\source\repos\dz\dz\dz_3\2.txt");
+            StreamWriter sw = new StreamWriter(@"C:\Users\Владислав\source\repos\dz\dz\dz_4\1.txt");
+            StreamWriter rw = new StreamWriter(@"C:\Users\Владислав\source\repos\dz\dz\dz_4\2.txt");
             while (hasnextCombobj(comb, a.last))
             {
                 string s = null;
