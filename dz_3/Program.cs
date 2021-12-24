@@ -81,11 +81,11 @@ namespace dz_3
                 return false;
             else return true;
         }
-        static bool proverka1(List<char> a)
+        static int[] mas(List<char> a)
         {
-            int[] b = new int[6];   
+            int[] b = new int[6];
 
-            for(int i=0;i<a.Count;i++)
+            for (int i = 0; i < a.Count; i++)
             {
                 if (a[i] == 'a')
                     b[0]++;
@@ -100,6 +100,12 @@ namespace dz_3
                 if (a[i] == 'f')
                     b[5]++;
             }
+            return b;
+        }
+        static bool proverka1(List<char> a)
+        {
+            int[] b = new int[6];
+            b = mas(a);
             if (povtor(b) && ras2(b))
                 return true;
             else return false;
@@ -127,26 +133,10 @@ namespace dz_3
         static bool proverka2(List<char> a)
         {
             int[] b = new int[6];
-
-            for (int i = 0; i < a.Count; i++)
-            {
-                if (a[i] == 'a')
-                    b[0]++;
-                if (a[i] == 'b')
-                    b[1]++;
-                if (a[i] == 'c')
-                    b[2]++;
-                if (a[i] == 'd')
-                    b[3]++;
-                if (a[i] == 'e')
-                    b[4]++;
-                if (a[i] == 'f')
-                    b[5]++;
-            }
+            b = mas(a);
             if (povtor_2(b) && ras2_2(b))
                 return true;
             else return false;
-
         }
         static void Main(string[] args)
         {
